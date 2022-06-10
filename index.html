@@ -1,3 +1,22 @@
-<html>
-  <script>window.location.href = "https://glowmem.com";</script>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>重定向准备中...</title>
+</head>
+<body>
+  <h1><span>3</span> 秒后页面将发生重定向</h1>
+  <script>
+    var timeBox = document.querySelector('h1 span');
+    var timer = setInterval(() => {
+      num = parseInt(timeBox.innerHTML)-1;
+      if (num == 0) {
+        clearInterval(timer);
+        window.location.href = 'https://glowmem.com';
+      }
+      timeBox.innerHTML = `${num}`;
+    }, 1000);
+</body>
 </html>
